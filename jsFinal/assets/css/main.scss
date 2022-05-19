@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    .header{
+       height: 60px;
+       display: flex;
+       align-items: center;
+        .container{
+            .logo{
+                height: 100%;
+              width: 10%;
+                img{
+                  width: 90px;
+                  height: 40px;
+                }
+            }
+        }
+    }
+}
