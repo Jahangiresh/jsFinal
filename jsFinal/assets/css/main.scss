@@ -1,12 +1,28 @@
+@import url(mixins/mixins.scss);
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+    // header start
+
     .header{
        height: 60px;
        display: flex;
+    background: white;
        align-items: center;
+       @include breakpoint-up("large") {
+        background: red;
+       }
         .container{
+        
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
             .logo{
                 height: 100%;
               width: 10%;
@@ -15,6 +31,80 @@
                   height: 40px;
                 }
             }
+            .menuicons{
+              ul{
+                padding-top: 10px;
+                display: flex;
+                gap: 15px;
+                li{
+                  a{
+                    font-size: 21px;
+                    color: black;
+                  
+                  }
+                }
+              }
+            }
         }
+       
+    }
+
+    // header end 
+    .carouselimg{
+      .my-owl{
+        .owl-dots{
+          .owl-dot{
+            span{
+              width: 30px;
+              height: 6px;
+              transform: translateY(-700%);
+            }
+          }
+         
+        }
+       color: white;
+   
+        .item1{
+          background-image: url(https://htmldemo.net/juan/juan/assets/img/slider/slider-2.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 350px;
+          display: flex;
+          align-items: center;
+          padding-left: 35px;
+          .itemcontent{
+            button{
+              color: #333333;
+              background-color: #fff;
+              border-radius: 50px;
+              padding: 18px 44px;
+          border: none;
+             }
+          }
+    
+        }
+        .item2{
+          background-image: url(https://htmldemo.net/juan/juan/assets/img/slider/slider-1.jpg);
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 350px;
+          display: flex;
+          align-items: center;
+          padding-left: 35px;
+          .itemcontent{
+            button{
+              color: #333333;
+              background-color: #fff;
+              border-radius: 50px;
+              padding: 18px 44px;
+          border: none;
+             }
+          }
+        }
+      }
     }
 }

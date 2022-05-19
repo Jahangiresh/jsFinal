@@ -1,3 +1,4 @@
+
 $breakpoints-up: (
   "medium": 768px,
   "large": 992px,
@@ -16,7 +17,6 @@ $breakpoints-down: (
     }
   }
 }
-
 @mixin breakpoint-down($size) {
   @if map-has-key($breakpoints-down, $size) {
     @media (max-width: map-get($breakpoints-down, $size)) {

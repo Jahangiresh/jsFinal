@@ -1,8 +1,12 @@
+@import url(mixins/mixins.scss);
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
 }
 
 * .header {
@@ -10,6 +14,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* .header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -23,5 +40,77 @@
 * .header .container .logo img {
   width: 90px;
   height: 40px;
+}
+
+* .header .container .menuicons ul {
+  padding-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 15px;
+}
+
+* .header .container .menuicons ul li a {
+  font-size: 21px;
+  color: black;
+}
+
+* .carouselimg .my-owl {
+  color: white;
+}
+
+* .carouselimg .my-owl .owl-dots .owl-dot span {
+  width: 30px;
+  height: 6px;
+  -webkit-transform: translateY(-700%);
+          transform: translateY(-700%);
+}
+
+* .carouselimg .my-owl .item1 {
+  background-image: url(https://htmldemo.net/juan/juan/assets/img/slider/slider-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 35px;
+}
+
+* .carouselimg .my-owl .item1 .itemcontent button {
+  color: #333333;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 18px 44px;
+  border: none;
+}
+
+* .carouselimg .my-owl .item2 {
+  background-image: url(https://htmldemo.net/juan/juan/assets/img/slider/slider-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 35px;
+}
+
+* .carouselimg .my-owl .item2 .itemcontent button {
+  color: #333333;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 18px 44px;
+  border: none;
 }
 /*# sourceMappingURL=main.css.map */
