@@ -1,5 +1,25 @@
+let scrollHeader=document.querySelector("#bottom-scroll")
 
-var owl = $('.owl-carousel');
+
+document.addEventListener('scroll', function(){
+   
+    if(window.scrollY>200){
+        scrollHeader.style.position = "fixed"
+        scrollHeader.style.marginTop="-50px"
+        scrollHeader.style.boxShadow=" 0px 3px 8px rgba(0, 0, 0, 0.24)"
+    }
+   
+
+    else{
+        scrollHeader.style.position = "static"
+        scrollHeader.style.marginTop="0px"
+        scrollHeader.style.boxShadow=" none"
+    }
+    
+})
+
+
+var owl = $('#owl1');
 owl.owlCarousel({
     items:2,
     loop:true,
@@ -26,4 +46,40 @@ $('.play').on('click',function(){
 })
 $('.stop').on('click',function(){
     owl.trigger('stop.owl.autoplay')
+});
+
+
+$('#owl2').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:2
+        },
+        600:{
+            items:2
+        },
+        1000:{
+            items:4
+        }
+    }
 })
+
+$('#owl3').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:4
+        }
+    }
+})
+
